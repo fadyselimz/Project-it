@@ -206,6 +206,9 @@ margin: 0;
 #ultra img{
     width: 120px;
 }
+.lapimg{
+    text-align: center;
+}
 .laptops{
     width: 190px;
     justify-content: center;
