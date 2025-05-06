@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    
+    background-color:#f5f5f5;
+}
+
+.title{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  background-color: #292b3c;
+  padding: 0px 20px;
+}
+
+h1{
+background-color: #292b3c;
+}
+.home-button {
+    position: absolute;
+    left: 115px;
+    top: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .home-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: filter 0.3s;
+  
+  }
+  
+  .home-button:hover .home-icon, .home-button:active .home-icon {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+    width: 50px;
+    height: 50px;  
+}
+  
+  .cart-button {
+    position: absolute;
+    left: 20px;
+    top: 23px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .cart-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: filter 0.3s;
+  }
+  
+  .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+    width: 60px;
+    height: 60px;
+    }
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #90d3b66b;
+    padding: 10px 20px;
+  }
+
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 16px;
+    gap: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+  }
+
+.add-to-cart{
+    background-color: #94a57d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: 0.4s;
+    margin-left: 30px;
+}
+
+.add-to-cart:hover {
+    background-color: #e65c00;
+    width: auto;
+    height: 42px;
+  }
+
+img{
+    height: 130px;
+    width: auto;
+    transition: 0.3s;
+    
+}
+img:hover{
+    height: 155px;
+    width: auto;
+}
+
+.h3{
+    height:auto;
+    display: inline-block;
+    grid-area: price;
+    margin-bottom:15px ;
+   margin-left: 40px;
+    
+}
+
+.price button{
+    align-self: end;
+}
+
+.book-name{
+    margin-left: 30px;
+    
+}
+
+
+.price{
+    margin-left: 30px;
+    
+}
+
+.horror-tytle , .fantasy-tytle ,.romantic-tytle , .acc-tytle {
+    border: solid 4px black;
+    margin-bottom: 20px;
+    background-color: #e3f3cd;
+    box-sizing: border-box;
+    height:auto;
+    border-radius: 25px; 
+    margin-top: 60px;
+}
+
+.horror-background , .fantasy-background , .romantic-background , .acc-background{
+    background-color: #d2c8c8;
+    height: 340px;
+ 
+ border-radius: 20px;
+ box-shadow: 8px 8px 10px 6px rgba(106, 104, 104, 0.844);
+ overflow-x: auto;
+ overflow-y: hidden;
+ margin: 0px;
+ padding: 0px;
+ padding-bottom:30px ;
+ align-self:center;
+}
+ 
+.horror-care , .fantasy-care , .romantic-care ,.acc-care {
+    justify-content:left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: transparent;
+    padding: 10px;
+    gap: 25px;    
+}
+
+
+.horror , .fantasy , .romantic , .acc {/*الديف ال شايل الصوره و ال سعر*/
+    border: solid 3px black;
+    display: inline-block;
+    background-color: #d2c8c8;
+    flex: 0 0 auto;
+ width: 13%;
+ height:340px ;
+ border-radius: 8px;
+ grid-template-rows: repeat(4,auto);
+
+}
+.horror1 , .fantasy1 , .romantic1 , .acc1{
+    /*الديف ال شايل الصوره*/
+    border: solid 5px black;
+    width: fit-content;
+    max-height: 90%;
+    grid-area: kof1;
+    margin-top: 20px;
+    margin: auto;
+    box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
+    padding: 0;
+    display: flex;
+    
+    
+}
+/* english */
+
+.eng-tytle{
+    border: solid 4px black;
+    margin-bottom: 20px;
+    background-color: #e3f3cd;
+    box-sizing: border-box;
+    height:auto;
+    border-radius: 25px; 
+    margin-top: 60px;
+}
+
+
+.eng-background{
+    background-color: #d2c8c8;
+    height: 350px;
+ 
+ border-radius: 20px;
+ box-shadow: 8px 8px 10px 6px rgba(106, 104, 104, 0.844);
+ overflow-x: auto;
+ overflow-y: hidden;
+ margin: 0px;
+ padding: 0px;
+ padding-bottom:30px ;
+ align-self:center;
+}
+
+
+.eng-care{
+    justify-content:left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: transparent;
+    padding: 10px;
+    gap: 25px;    
+}
+
+.eng{/*الديف ال شايل الصوره و ال سعر*/
+    border: solid 3px black;
+    display: inline-block;
+    background-color: #d2c8c8;
+    flex: 0 0 auto;
+ width: 15%;
+ height:350px ;
+ border-radius: 8px;
+ grid-template-rows: repeat(4,auto);
+
+}
+
+.eng1{
+    /*الديف ال شايل الصوره*/
+    border: solid 5px black;
+    width: fit-content;
+    max-height: 90%;
+    grid-area: kof1;
+    margin-top: 20px;
+    margin: auto;
+    box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
+    padding: 0;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
