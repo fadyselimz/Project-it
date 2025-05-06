@@ -12,19 +12,56 @@ body {
     margin: 0;
     
 }
+.nav{
+    grid-template-columns: repeat(3, 1fr);
+    color: #333;
+    background-color: #388e3c;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 70px;
+    align-items: center;
+    grid-template-areas: ". title .";
+    top: 0;
+    z-index: 1000;
+}
 
 h1 {
-    position: absolute;
-    top: 14px;
-    left: 45%;
     margin: 0; 
     justify-self: center;
     align-self: center;
-    height: 100%;
-    z-index: 2;
-
+    grid-area: title;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 15px;
 }
-  
+    .big{
+        background-color: #388e3c;
+        margin-bottom: 0;
+    }
+    .small{
+        background-color: #256728;
+    height: 40px;
+    top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    }
+    .small a{
+        color: rgb(27, 27, 44);
+        text-decoration: none;
+    }
+    .small a:hover{
+        color: #00bcd4;
+        cursor: pointer;
+        font-size: 30px;
+        transition: color 0.3s;
+    }
   .home-button {
     position: absolute;
     top: 16px;
@@ -72,26 +109,8 @@ h1 {
   .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
     filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
   }
-.nav{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 0;
-    margin-bottom: 30px;
-    height: 70px;
-    top: 0;
-    z-index: 1;
-}
-    .big{
-        margin-bottom: 0;
-        background-color: #388e3c;
-    }
-    .small{
-        background-color: #256728;
-    height: 30px;
-    top: 70px;
-    }
 
- h3 {
+h3 {
     font-family: "Exo 2", sans-serif;
 } 
 

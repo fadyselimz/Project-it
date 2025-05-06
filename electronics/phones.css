@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+.nav{
+    grid-template-columns: repeat(3, 1fr);
+    color: #333;
+    background-color: #388e3c;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 30px;
+    height: 70px;
+    align-items: center;
+    grid-template-areas: ". title .";
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0; 
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 15px;
+}
+    .big{
+        background-color: #388e3c;
+        margin-bottom: 0;
+    }
+    .small{
+        background-color: #256728;
+    height: 40px;
+    top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    }
+    .small a{
+        color: rgb(27, 27, 44);
+        text-decoration: none;
+    }
+    .small a:hover{
+        color: #00bcd4;
+        cursor: pointer;
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+    .home-button {
+      position: absolute;
+      top: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+      margin-left: 10px;
+      margin-right: 10px;
+      
+    
+    }
+    
+    .home-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: filter 0.3s;
+    
+    }
+    
+    .home-button:hover .home-icon, .home-button:active .home-icon {
+      filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+    }
+    
+    .cart-button {
+      position: absolute;
+      top: 14px;
+      left: 52px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+    .cart-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: filter 0.3s;
+    }
+    
+    .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
+      filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+    }
+
+.cont{
+  margin: 0 50px;
+  padding-bottom: 10px;
+}
+.carry{
+    display: grid;
+    /* grid-template-columns: repeat(4, auto); */
+    padding: 10px;
+    text-align: center;
+    gap: 0 10%;
+    padding-bottom: 10px;
+    align-items: start;
+}
+
+.product{
+    width: 140px;
+    /* height: 93%; */
+    box-shadow: none;
+    display: grid;
+    flex: 0 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 13px;
+    border: #a7a2a2 1px ridge;
+    background-color:#c0a9a9;
+}
+.product button {
+    background: #FFD814;
+    border: 1px solid #FCD200;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 10px;
+    transition: 0.5s;}
+    .product:hover {
+        transform: translateY(-5px) translateX(-5px);
+        box-shadow: #333 5px 5px 15px;
+        border-radius: 13px;
+        }
+        .product button:hover{
+            background-color: #ff9d14;
+            border: 1px solid #c77708;
+            }
+            .phimg{
+            text-align: center;
+            }   
+            .phimg img{
+                width: auto;
+                height: 125px;
+                align-self: center;
+                }
+                .name{
+                    max-width: 150px;
+                    height: 60px;
+                    margin: 0;
+                    }
+                    .name h3{
+                        margin: 0;
+                        font-weight: bold;
+                    }
+                    .price{
+                        height: 60px;
+                        width: 100%;
+                    }
+                    .price button{
+                        align-items: center;
+                        width: 100%;
+                    }
+                    .price h3{
+                        color: royalblue;
+                        margin: 0;
+                        font-weight: bold;
+                        text-align: right;
+                        font-style: italic;
+                    }
+
+                  
+                    @media (max-width: 5000px) {
+                        .carry {
+                          grid-template-columns: repeat(4, 1fr);
+                        }
+                      }
+                    
+                      @media (max-width: 1080px) {
+                        .carry {
+                          grid-template-columns: repeat(3, 1fr);
+                        }
+                      }
+                    
+                      @media (max-width: 730px) {
+                        .carry {
+                          grid-template-columns: repeat(2, 1fr);
+                        }
+                      }
+                    
+                      @media (max-width: 400px) {
+                        .carry {
+                          grid-template-columns: 1fr;
+                        }
+                      }
