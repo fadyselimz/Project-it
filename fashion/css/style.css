@@ -18,54 +18,55 @@ h1{
   text-align: center;
 }
 .header{
-    height: 75px;
-    font-size: 30px;
-    font-weight: bold;
-    background-color:#3a973e ; 
-   text-align: center;
+  display: flex;
+  height: 75px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color:#3a973e ; 
+ justify-content: center;
 }
-  .home-button {
-    position: absolute;
-    top: 11px;
-    left: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .home-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: filter 0.3s;
-  
-  }
-  
-  .home-button:hover .home-icon, .home-button:active .home-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-  }
-  
-  .cart-button {
-    position: absolute;
-    top: 6px;
-    left: 85px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .cart-icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    transition: filter 0.3s;
-  }
-  
-  .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-  }
+.home-button {
+  position: absolute;
+  top: 11px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.home-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: filter 0.3s;
+
+}
+
+.home-button:hover .home-icon, .home-button:active .home-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+}
+
+.cart-button {
+  position: absolute;
+  top: 7px;
+  left: 115px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cart-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transition: filter 0.3s;
+}
+
+.cart-button:hover .cart-icon, .cart-button:active .cart-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+}
+
 
 
  .nav  { 
