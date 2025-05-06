@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+<div class="down">
+    <div id="loginForm" class="active dott">
+        <h2 class="h2">Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPass" placeholder="Password">
+        <button class="my-btn" onclick="login()">Login</button>
+        <p id="loginError" style="color:#DC2626;"></p>
+        <p class="h2">Don't have an account? <span class="tab" onclick="showTab('signup')">Sign up</span></p>
+    </div>
+    
+    <div id="signupForm" class="dott">
+        <h2 class="h2">Sign Up</h2>
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPass" placeholder="Password">
+        <button class="my-btn" onclick="signup()">Sign Up</button>
+        <p id="signupError" style="color:#DC2626;"></p>
+        <p class="h2">Already have an account? <span class="tab" onclick="showTab('login')">Login</span></p>
+    </div>
+    
+</div>
+
+<div id="welcome">
+    <h2>Welcome!</h2>
+    <p>You're logged in.</p>
+    <button onclick="logout()">Logout</button>
+</div>
+
+    <script src="./login.js"></script>
+
+</body>
+</html>
