@@ -10,17 +10,24 @@ body{
     background-color: #f5f5f5;
     overflow-x: hidden;
 }
+h1{
+  position: absolute;
+  font-size: 45px;
+  top: 15px;
+  width: 100%;
+  text-align: center;
+}
 .header{
-    display: flex;
     height: 75px;
     font-size: 30px;
     font-weight: bold;
     background-color:#3a973e ; 
-   justify-content: center;
+   text-align: center;
 }
   .home-button {
     position: absolute;
     top: 11px;
+    left: 20px;
     background: none;
     border: none;
     cursor: pointer;
@@ -28,8 +35,8 @@ body{
   }
   
   .home-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     transition: filter 0.3s;
   
@@ -41,8 +48,8 @@ body{
   
   .cart-button {
     position: absolute;
-    top: 7px;
-    left: 115px;
+    top: 6px;
+    left: 85px;
     background: none;
     border: none;
     cursor: pointer;
@@ -50,8 +57,8 @@ body{
   }
   
   .cart-icon {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     transition: filter 0.3s;
   }
@@ -61,11 +68,12 @@ body{
   }
 
 
- .nav  ul{ 
+ .nav  { 
 
    display: flex;
     background-color: #388e3c;
     font-size: 30px;
+    gap: 40px;
     font-weight: bold;
     flex-wrap: nowrap;
     justify-content: center;   
@@ -73,7 +81,7 @@ body{
 
  .nav ul li a{
   color: blue;
-  margin: 110px;
+  /* margin: 110px; */
   transition-duration: 0.3s; 
   transition-property: all;  
 }
@@ -125,3 +133,26 @@ h3,.price,.add-to-cart{
     transform: scale(1.05);
 }
 
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
