@@ -12,10 +12,12 @@ body{
 }
 h1{
   position: absolute;
-  font-size: 45px;
-  top: 15px;
   width: 100%;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
+  background-color: #3a973e;
 }
 .header{
   display: flex;
@@ -27,7 +29,8 @@ h1{
 }
 .home-button {
   position: absolute;
-  top: 11px;
+  top: 7px;
+  left: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -35,8 +38,8 @@ h1{
 }
 
 .home-icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   transition: filter 0.3s;
 
@@ -49,7 +52,7 @@ h1{
 .cart-button {
   position: absolute;
   top: 7px;
-  left: 115px;
+  left: 105px;
   background: none;
   border: none;
   cursor: pointer;
@@ -57,8 +60,8 @@ h1{
 }
 
 .cart-icon {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   transition: filter 0.3s;
 }
