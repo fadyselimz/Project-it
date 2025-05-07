@@ -271,7 +271,7 @@ h1 {
   .nav{
       gap: 10px;
   }
-  .small {
-      gap: 15px;
-    }
+    .small {
+        gap: 15px;
+        }
 }
