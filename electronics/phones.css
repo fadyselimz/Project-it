@@ -215,6 +215,7 @@ h1 {
   font-weight: 900;
   text-align: right;
   font-style: italic;
+  font-size: 23px;
 }
 
                   
@@ -268,6 +269,6 @@ h1 {
       height: 40px;
   }
   .nav{
-      gap: 5px;
+      gap: 10px;
   }
 }

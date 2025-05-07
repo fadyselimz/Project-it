@@ -188,11 +188,11 @@ h3 {
     background-color: #ff9d14;
     border: 1px solid #c77708;
     }
-    .phimg{
+    .primg,.phimg{
     text-align: center;
     }
 
-    .phimg img{
+    .primg img,.phimg img{
     width: auto;
     height: 125px;
     align-self: center;
