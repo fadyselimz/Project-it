@@ -112,6 +112,7 @@ h1 {
   z-index: 2;
   margin-left: 10px;
   margin-right: 10px;
+  text-decoration: none;
 }
 
 .cart-icon {
@@ -132,7 +133,7 @@ h1 {
   padding: 2px 8px;
   position: relative;
   top: 1px;
-  right: 21px;
+  right: 24px;
   font-size: 12px;
 }
 .products-grid {
