@@ -2,22 +2,8 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #c0a9a9;
+    background-color: #b2b2d6;
     overflow-x: hidden;
-}
-.nav{
-    grid-template-columns: repeat(3, 1fr);
-    color: #333;
-    background-color: #388e3c;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 30px;
-    height: 70px;
-    align-items: center;
-    grid-template-areas: ". title .";
-    top: 0;
-    z-index: 1000;
 }
 
 .nav{
@@ -69,13 +55,14 @@ body{
 
 h1 {
   margin: 0 20px; 
+  color: #ececec;
 }
   .big{
-      background-color: #388e3c;
+      background-color: #0a0b2ce8;
       margin-bottom: 0;
   }
   .small{
-      background-color: #256728;
+      background-color: #0a0b2c;
   height: 40px;
   top: 65px;
   display: flex;
@@ -87,7 +74,7 @@ h1 {
   margin-bottom: 30px;
   }
   .small a{
-      color: rgb(27, 27, 44);
+      color: #ececec;
       text-decoration: none;
   }
   .small a:hover{
@@ -126,6 +113,7 @@ h1 {
   z-index: 2;
   margin-left: 10px;
   margin-right: 10px;
+  text-decoration: none;
 }
 
 .cart-icon {
@@ -133,6 +121,16 @@ h1 {
   height: 50px;
   border-radius: 50%;
   transition: filter 0.3s;
+}
+.cart-badge {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  position: relative;
+  top: 1px;
+  right: 24px;
+  font-size: 12px;
 }
 
 .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
@@ -164,6 +162,7 @@ h1 {
     border-radius: 13px;
     border: #a7a2a2 1px ridge;
     background-color:#fff;
+    font-family: "Exo 2", sans-serif;
 }
 .product button {
   background: #FFD814;
@@ -213,12 +212,23 @@ h1 {
 .price h3{
   color: royalblue;
   margin: 0;
-  font-weight: 900;
   text-align: right;
   font-style: italic;
   font-size: 25px;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #0c0f56c6;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
                   
 @media (max-width: 5000px) {
     .carry {
