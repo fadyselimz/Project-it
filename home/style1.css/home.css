@@ -2,6 +2,8 @@ body{
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  overflow-x: hidden;
+  text-decoration: none;
 }
 
 .header {
@@ -34,6 +36,16 @@ body{
   height: 50px;
 }
 
+.cart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+
 .cart-icon {
   width: 50px;
   height: 50px;
@@ -41,11 +53,20 @@ body{
   transition: filter 0.3s;
 }
 
-
 .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
   filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
 
+.cart-badge {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  position: relative;
+  font-size: 12px;
+  top: -23px;
+    right: -20px;
+}
 
 .products {
   display: flex;
@@ -125,7 +146,7 @@ body{
   display: grid;  
   grid-template-columns: repeat(2,auto);
   grid-template-rows: repeat(2,auto);
-gap: 10%;
+  gap: 10%;
   justify-content: center;
   align-items: center;
   background-color: transparent;

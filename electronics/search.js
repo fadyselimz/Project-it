@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!searchTerm) {
             products.forEach(product => {
                 product.style.display = '';
-                product.style.visibility = 'visible';
             });
             return;
         }
@@ -31,18 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const productPrice = product.querySelector('.price h3').textContent.toLowerCase();
             
             if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
-                product.style.visibility = 'visible';
                 product.style.display = '';
-                // Add a subtle highlight using a class instead of inline styles
                 product.classList.add('highlight');
-                
                 if (!firstMatch) {
                     firstMatch = product;
                 }
             } else {
-                // Hide the product but maintain layout space
-                product.style.visibility = 'hidden';
-                product.style.display = '';
+                product.style.display = 'none';
             }
         });
 
