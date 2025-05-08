@@ -47,14 +47,38 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.removeItem('cart');
             renderCart();
         });
-        document.getElementById('checkout-btn').addEventListener('click', function() {
-            // Show a simple prompt for payment method (only cash allowed)
-            if (confirm('Pay cash only. Proceed to checkout?')) {
-                // Clear the cart
-                localStorage.removeItem('cart');
-                renderCart();
-                updateCartBadge();
-                alert('Thank you for your purchase! Please pay cash.');
+        const checkoutButton = document.getElementById('checkout-button');
+        const paymentOptions = document.getElementById('payment-options');
+        
+        checkoutButton.addEventListener('click', function() {
+            paymentOptions.style.display = 'block';
+        });
+        
+        const paymentRadios = document.querySelectorAll('input[name="payment-method"]');
+        const visaDetails = document.getElementById('visa-details');
+
+        paymentRadios.forEach(function(elem) {
+            elem.addEventListener('change', function() {
+                if (this.value === 'visa') {
+                    visaDetails.style.display = 'block';
+                } else {
+                    visaDetails.style.display = 'none';
+                }
+            });
+        });
+
+        const confirmPaymentButton = document.getElementById('confirm-payment');
+        confirmPaymentButton.addEventListener('click', function() {
+            const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
+            if (selectedPaymentMethod) {
+                if (selectedPaymentMethod.value === 'visa') {
+                    // Validate Visa details here if needed
+                    alert('Visa payment selected. Please ensure all details are correct.');
+                } else {
+                    alert(`You have selected ${selectedPaymentMethod.value} as your payment method.`);
+                }
+            } else {
+                alert('Please select a payment method.');
             }
         });
     }

@@ -26,7 +26,26 @@
     <div class="cart-controls">
         <div class="cart-total" id="cart-total"></div>
         <button id="clear-cart">Clear Cart</button>
-        <button id="checkout-btn" style="margin-top:30px;">Checkout</button>
+        <button id="checkout-button">Checkout</button>
+
+        <div id="payment-options" style="display:none;">
+            <h3>Select Payment Method</h3>
+            <label>
+                <input type="radio" name="payment-method" value="cash" required>
+                <img src="cash logo.png" alt="Visa" style="height:24px;vertical-align:middle;">
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="visa" required>
+                <img src="visa logo.png" alt="Visa" style="height:24px;vertical-align:middle;">
+            </label>
+            <div id="visa-details" style="display:none;">
+                <input type="text" name="cardholder-name" placeholder="Cardholder Name" pattern="[A-Za-z\s]+" title="Please enter letters only" required>
+                <input type="text" name="card-number" placeholder="Card Number (16 digits)" pattern="\d{16}" title="Please enter a 16-digit card number" required>
+                <input type="text" name="expiry-date" placeholder="Expiry Date (MM/YY)" pattern="\d{2}/\d{2}" title="Please enter in MM/YY format" required>
+                <input type="text" name="cvv" placeholder="CVV (3 digits)" pattern="\d{3}" title="Please enter a 3-digit CVV" required>
+            </div>
+            <button id="confirm-payment">Confirm Payment</button>
+        </div>
     </div>
     <script src="cart.js"></script>
 </body>
