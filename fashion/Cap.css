@@ -135,4 +135,40 @@ h3,.price,.add-to-cart{
   background-color: #ff9d14; 
   transform: scale(1.05);
 }
+ellipse.search {
+  width: 50%;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 30px;
+  margin: 0 140px;
+  transition: box-shadow 0.3s;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.search img {
+  width: 30px;
+}
+
+.search-input {
+  font-size: 18px;
+  font-family: "Exo 2", sans-serif;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-family: "Exo 2", sans-serif;
+}
 

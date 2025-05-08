@@ -180,7 +180,17 @@ h3,.price,.add-to-cart{
 .add-to-cart:hover {
     background-color: #ff9d14; 
     transform: scale(1.05);
-}
+  }
+  .containrr {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
 @media (max-width: 5000px) {
   .products-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -233,12 +243,4 @@ h3,.price,.add-to-cart{
   .nav{
       gap: 10px;
   }
-<<<<<<< HEAD
-}
-.products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-=======
->>>>>>> 180360d63345b8aef7a7550029b3f31648c625c0
 }
