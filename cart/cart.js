@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.add-to-cart').forEach(function(button) {
         button.addEventListener('click', function() {
             // Find product info (customize selectors as needed)
-            const productCard = button.closest('.product, .product-card, .acc, .eng');
+            const productCard = button.closest('.product, .product-card, .acc, .eng, .horror, .fantasy, .romantic');
             if (!productCard) return;
             let name = productCard.querySelector('h3, .book-name')?.textContent?.trim() || '';
             let price = productCard.querySelector('.price, p')?.textContent?.trim() || '';
@@ -77,4 +77,3 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartBadge();
     };
 });
-// ... existing code ...
