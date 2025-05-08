@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Attach event listeners to all add-to-cart buttons
     document.querySelectorAll('.add-to-cart').forEach(function(button) {
         button.addEventListener('click', function() {
-            // Find product info (customize selectors as needed)
             const productCard = button.closest('.product, .product-card, .acc, .eng, .horror, .fantasy, .romantic');
             if (!productCard) return;
             let name = productCard.querySelector('h3, .book-name')?.textContent?.trim() || '';
@@ -49,15 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const checkoutButton = document.getElementById('checkout-button');
         const paymentOptions = document.getElementById('payment-options');
-        
+        const confirmPaymentButton = document.getElementById('confirm-payment');
+        const cartTableBody = document.querySelector('#cart-table tbody');
+        const visaDetails = document.getElementById('visa-details');
+
         checkoutButton.addEventListener('click', function() {
             paymentOptions.style.display = 'block';
         });
-        
-        const paymentRadios = document.querySelectorAll('input[name="payment-method"]');
-        const visaDetails = document.getElementById('visa-details');
 
-        paymentRadios.forEach(function(elem) {
+        document.querySelectorAll('input[name="payment-method"]').forEach(function(elem) {
             elem.addEventListener('change', function() {
                 if (this.value === 'visa') {
                     visaDetails.style.display = 'block';
@@ -67,16 +66,41 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        const confirmPaymentButton = document.getElementById('confirm-payment');
         confirmPaymentButton.addEventListener('click', function() {
             const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
             if (selectedPaymentMethod) {
                 if (selectedPaymentMethod.value === 'visa') {
-                    // Validate Visa details here if needed
-                    alert('Visa payment selected. Please ensure all details are correct.');
+                    const cardholderName = document.querySelector('input[name="cardholder-name"]').value;
+                    const cardNumber = document.querySelector('input[name="card-number"]').value;
+                    const expiryDate = document.querySelector('input[name="expiry-date"]').value;
+                    const cvv = document.querySelector('input[name="cvv"]').value;
+
+                    if (!cardholderName.match(/^[A-Za-z\s]+$/)) {
+                        alert('Please enter a valid cardholder name.');
+                        return;
+                    }
+                    if (!cardNumber.match(/^\d{16}$/)) {
+                        alert('Please enter a valid 16-digit card number.');
+                        return;
+                    }
+                    if (!expiryDate.match(/^\d{2}\/\d{2}$/)) {
+                        alert('Please enter a valid expiry date in MM/YY format.');
+                        return;
+                    }
+                    if (!cvv.match(/^\d{3}$/)) {
+                        alert('Please enter a valid 3-digit CVV.');
+                        return;
+                    }
+
+                    alert('Visa payment selected. Details are correct.');
                 } else {
                     alert(`You have selected ${selectedPaymentMethod.value} as your payment method.`);
                 }
+                localStorage.removeItem('cart');
+                while (cartTableBody.firstChild) {
+                    cartTableBody.removeChild(cartTableBody.firstChild);
+                }
+                updateCartBadge();
             } else {
                 alert('Please select a payment method.');
             }
