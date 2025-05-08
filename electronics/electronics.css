@@ -1,8 +1,11 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    /* margin: 0; */
+
+/* Reset and Base Styles */
+* {
     padding: 0;
 }
+
 body {
     background-color: #b2b2d6;
     background-repeat: repeat;
@@ -10,9 +13,10 @@ body {
     background-size: cover;
     border-radius: 10px;
     margin: 0;
-    
 }
-.nav{
+
+/* Navigation Styles */
+.nav {
     display: flex;
     font-family: "Exo 2", sans-serif;
     font-weight: 700;
@@ -24,8 +28,29 @@ body {
     top: 0;
     z-index: 1000;
     padding: 0 20px;
+    padding-left: 10px ;
 }
-.search{
+
+.big {
+    background-color: #0a0b2cec;
+    margin-bottom: 0;
+}
+
+.small {
+    background-color: #0a0b2c;
+    height: 40px;
+    top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Search Bar Styles */
+.search {
     width: 50%;
     display: flex;
     justify-self: center;
@@ -37,81 +62,74 @@ body {
     margin: 0 140px;
     transition: box-shadow 0.3s;
 }
-.search:focus-within{
+
+.search:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-.search img{
+
+.search img {
     width: 30px;
 }
-.search-input{
+
+.search-input {
     font-size: 18px;
     font-family: "Exo 2", sans-serif;
-    margin-left:10px ;
+    margin-left: 10px;
     border: none;
     outline: none;
     background-color: transparent;
     flex: 1;
 }
-.search-input::placeholder{
+
+.search-input::placeholder {
     color: rgba(0, 0, 0, 0.5);
     font-size: 18px;
     font-family: "Exo 2", sans-serif;
 }
 
+/* Navigation Links */
+.small a {
+    color: #ececec;
+    text-decoration: none;
+}
+
+.small a:hover {
+    color: #00bcd4;
+    cursor: pointer;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+/* Header Text */
 h1 {
-    margin: 0 20px; 
+    margin: 0 20px;
     color: #ececec;
 }
-    .big{
-        background-color: #0a0b2cec;
-        margin-bottom: 0;
-    }
-    .small{
-        background-color: #0a0b2c;
-    height: 40px;
-    top: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    }
-    .small a{
-        color: #ececec;
-        text-decoration: none;
-    }
-    .small a:hover{
-        color: #00bcd4;
-        cursor: pointer;
-        font-size: 30px;
-        transition: 0.3s;
-    }
-  .home-button {
+
+/* Home Button Styles */
+.home-button {
     background: none;
     border: none;
     cursor: pointer;
     z-index: 2;
     margin-left: 10px;
     margin-right: 10px;
-    
+}
 
-  }
-  
-  .home-icon {
+.home-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     transition: filter 0.3s;
-  
-  }
-  
-  .home-button:hover .home-icon, .home-button:active .home-icon {
+}
+
+.home-button:hover .home-icon,
+.home-button:active .home-icon {
     filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-  }
-  
-  .cart-button {
+}
+
+/* Cart Button Styles */
+.cart-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -119,15 +137,16 @@ h1 {
     margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
-  }
-  
-  .cart-icon {
+}
+
+.cart-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     transition: filter 0.3s;
-  }
-  .cart-badge {
+}
+
+.cart-badge {
     background: red;
     color: white;
     border-radius: 50%;
@@ -136,31 +155,35 @@ h1 {
     top: 19px;
     right: 54px;
     font-size: 12px;
-  }
-  
-  .cart-button:hover .cart-icon, .cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-  }
+}
 
-.carry{
+.cart-button:hover .cart-icon,
+.cart-button:active .cart-icon {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+}
+
+/* Product Container Styles */
+.carry {
     background-color: #7474d5;
     height: 300px;
     margin: 0;
     overflow-x: auto;
     overflow-y: hidden;
-    border-radius:30px ;
+    border-radius: 30px;
     padding-bottom: 30px;
 }
-.products{
+
+.products {
     display: flex;
     align-items: center;
     height: 100%;
-    background-color:transparent;
+    background-color: transparent;
     padding: 10px;
     gap: 10px;
-} 
+}
 
-.product{
+/* Product Card Styles */
+.product {
     display: grid;
     width: 140px;
     height: 93%;
@@ -175,7 +198,8 @@ h1 {
     justify-content: center;
     font-family: "Exo 2", sans-serif;
 }
-    .product button {
+
+.product button {
     background: #FFD814;
     border: 1px solid #FCD200;
     padding: 10px 15px;
@@ -186,148 +210,171 @@ h1 {
     margin: 0;
     margin-top: 10px;
     transition: 0.5s;
-     }
-    .product:hover {
+}
+
+.product:hover {
     transform: translateY(-5px) translateX(-5px);
     box-shadow: #333 5px 5px 15px;
     border-radius: 13px;
-    }
-    .product button:hover{
+}
+
+.product button:hover {
     background-color: #ff9d14;
     border: 1px solid #c77708;
-    }
-    .primg,.phimg{
-    text-align: center;
-    }
+}
 
-    .primg img,.phimg img{
+/* Product Image Styles */
+.primg,
+.phimg {
+    text-align: center;
+}
+
+.primg img,
+.phimg img {
     width: auto;
     height: 125px;
     align-self: center;
-    }
-
-#headp{
-    padding: 0;
-    padding-top: 20px;
 }
 
-.text{
-    text-decoration: underline;
-    position: relative;
+/* Product Details Styles */
+.name {
+    max-width: 150px;
+    height: 60px;
+    margin: 0;
 }
 
-.name{
-max-width: 150px;
-height: 60px;
-margin: 0;
-}
-.name h3{
+.name h3 {
     margin: 0;
     font-weight: bold;
 }
-.price{
+
+.price {
     height: 60px;
     width: 100%;
 }
-.price button{
+
+.price button {
     align-items: center;
     width: 100%;
 }
-.price h3{
+
+.price h3 {
     color: royalblue;
     margin: 0;
     font-weight: bold;
     text-align: right;
     font-style: italic;
 }
+
+/* Scrollbar Styles */
 body::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #0c0f56c6;
-  border-radius: 4px;
+    background: #0c0f56c6;
+    border-radius: 4px;
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
+
 .carry::-webkit-scrollbar {
     height: 8px;
-  }
-  
+}
+
 .carry::-webkit-scrollbar-thumb {
     background: #0c0f56c6;
     border-radius: 4px;
-  }
-  
+}
+
 .carry::-webkit-scrollbar-track {
     background: transparent;
-  }
+}
 
-#ultra img{
+/* Special Product Styles */
+#ultra img {
     width: 120px;
 }
-.laptops{
+
+.laptops {
     width: 190px;
     justify-content: center;
 }
-.lapimg{
+
+.lapimg {
     width: fit-content;
     justify-self: center;
 }
-.laptops img{
+
+.laptops img {
     width: auto;
     height: 100px;
     justify-self: center;
     object-fit: contain;
 }
-.laptops .name{
+
+.laptops .name {
     object-fit: contain;
 }
-.laptops .price{
+
+.laptops .price {
     align-content: center;
 }
 
-  @media (max-width: 600px) {
-    .small {
-      font-size: 15px;
-      gap: 20px;
-    }
-    .small a {
-      font-size: 15px;
-    }
-  }
-  @media (max-width: 920px) {
-    .search{
+/* Search Highlight Effect */
+.highlight {
+    box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 920px) {
+    .search {
         margin: 0 20px;
     }
+    h1 {
+      font-size: 20px;
   }
-  @media(max-width: 660px) {
-    .search-input{
+}
+
+@media (max-width: 660px) {
+    .search-input {
         width: 60px;
         font-size: 13px;
     }
-    .home-icon{
+    .home-icon {
         width: 30px;
         height: 30px;
     }
-    .cart-icon{
+    .cart-icon {
         width: 40px;
         height: 40px;
     }
-    .nav{
+    .nav {
         gap: 3px;
     }
     .small {
         gap: 15px;
-      }
-      .cart-badge {
+    }
+    .cart-badge {
         top: 18px;
         right: 34px;
         font-size: 10px;
-      }
-      h1{
+    }
+    h1 {
         font-size: 20px;
-      }
-  }
+    }
+}
+
+@media (max-width: 600px) {
+    .small {
+        font-size: 15px;
+        gap: 20px;
+    }
+    .small a {
+        font-size: 15px;
+    }
+}
