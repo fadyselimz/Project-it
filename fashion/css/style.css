@@ -233,9 +233,12 @@ h3,.price,.add-to-cart{
   .nav{
       gap: 10px;
   }
+<<<<<<< HEAD
 }
 .products-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+=======
+>>>>>>> 180360d63345b8aef7a7550029b3f31648c625c0
 }

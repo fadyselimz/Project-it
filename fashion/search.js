@@ -43,7 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else {
                 product.style.visibility = 'hidden';
+<<<<<<< HEAD
                 product.style.display = "none";
+=======
+                product.style.display = '';
+>>>>>>> 180360d63345b8aef7a7550029b3f31648c625c0
             }
         });
 
