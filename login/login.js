@@ -11,6 +11,7 @@ function showTab(tab) {
 function login() {
     const email = document.getElementById('loginEmail').value;
     const pass = document.getElementById('loginPass').value;
+    const urlToOpen = '../home/home.html';
     
     const user = users.find(
         function(u) {
@@ -22,7 +23,7 @@ function login() {
     
     if (user) {
         document.getElementById('loginForm').classList.remove('active');
-        document.getElementById('welcome').style.display = 'block';
+        window.open(urlToOpen);
     } else {
         document.getElementById('loginError').textContent = 'Wrong email or password';
     }
