@@ -126,8 +126,8 @@ h1 {
 
 .cart-badge {
   position: absolute;
-  top: 0px;
-  right: -8px;
+  top: 33px;
+  right: 5px;
   background: red;
   color: white;
   border-radius: 50%;
@@ -245,136 +245,7 @@ body::-webkit-scrollbar-track {
   transition: all 0.3s ease;
 }
                   
-@media (max-width: 5000px) {
-  .carry {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-@media (max-width: 1360px) {
-  .carry {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 900px) {
-  .carry {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .carry {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .small {
-    font-size: 15px;
-  }
-  .small a {
-    font-size: 15px;
-  }
-}
-@media (max-width: 920px) {
-  .search{
-      margin: 0 20px;
-  }
-}
-@media(max-width: 660px) {
-  .search-input{
-      width: 60px;
-      font-size: 13px;
-  }
-  .home-icon{
-      width: 30px;
-      height: 30px;
-  }
-  .cart-icon{
-      width: 40px;
-      height: 40px;
-  }
-  .nav{
-      gap: 10px;
-  }
-  .small {
-      gap: 15px;
-    }
-}
-
-
-@media (max-width: 920px) {
-    .search {
-        margin: 0 20px;
-    }
-    .cart-icon {
-        width: 45px;
-        height: 45px;
-    }
-    .cart-badge {
-        font-size: 11px;
-        padding: 2px 5px;
-    }
-}
-
-@media (max-width: 660px) {
-    .search-input {
-        width: 60px;
-        font-size: 13px;
-    }
-    .home-icon {
-        width: 30px;
-        height: 30px;
-    }
-    .cart-icon {
-        width: 35px;
-        height: 35px;
-    }
-    .cart-badge {
-        font-size: 10px;
-        padding: 1px 4px;
-        top: 0;
-        right: -6px;
-        min-width: 6px;
-        height: 6px;
-    }
-    .nav {
-        gap: 10px;
-    }
-    .small {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .small {
-        font-size: 15px;
-    }
-    .small a {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cart-icon {
-        width: 30px;
-        height: 30px;
-    }
-    .cart-badge {
-        font-size: 9px;
-        padding: 1px 3px;
-        top: 0;
-        right: -4px;
-        min-width: 5px;
-        height: 5px;
-    }
-}
-
-@media (max-width: 400px) {
-    .carry {
-        grid-template-columns: 1fr;
-    }
-}
 .product button:hover{
   background-color: #ff9d14;
   border: 1px solid #c77708;

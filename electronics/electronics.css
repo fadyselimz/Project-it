@@ -153,8 +153,8 @@ h1 {
 
 .cart-badge {
     position: absolute;
-    top:  0px;
-    right: 24px;
+    top:  33px;
+    right: 3px;
     background: red;
     color: white;
     border-radius: 50%;
@@ -360,8 +360,8 @@ body::-webkit-scrollbar-track {
   .cart-badge {
     width: 12px;
     height: 12px;
-    top: 0;
-    right: -8px;
+    top: 27px;
+    right: 3px;
     font-size: 10px;
     padding: 1px 4px;
 }
@@ -386,22 +386,18 @@ body::-webkit-scrollbar-track {
     .small {
         gap: 15px;
     }
-    .cart-badge {
-        top: 18px;
-        right: 34px;
-        font-size: 10px;
-    }
+
     h1 {
         font-size: 20px;
     }
-}
-.cart-badge {
-  width: 12px;
-  height: 12px;
-  top: 0;
-  right: -8px;
-  font-size: 10px;
-  padding: 1px 4px;
+    .cart-badge {
+        width: 12px;
+        height: 12px;
+        top: 33px;
+        right: 3px;
+        font-size: 10px;
+        padding: 1px 4px;
+    }
 }
 
 
@@ -413,12 +409,5 @@ body::-webkit-scrollbar-track {
     .small a {
         font-size: 15px;
     }
-    .cart-badge {
-        width: 12px;
-        height: 12px;
-        top: 0;
-        right: -8px;
-        font-size: 10px;
-        padding: 1px 4px;
-    }
+   
 }

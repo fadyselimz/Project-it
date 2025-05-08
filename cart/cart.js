@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     cartTableBody.removeChild(cartTableBody.firstChild);
                 }
                 updateCartBadge();
+                // Add this line to reset the total price
+                document.getElementById('cart-total').innerHTML = '<strong>Total: 0.00 EGP</strong>';
             } else {
                 alert('Please select a payment method.');
             }

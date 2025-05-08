@@ -127,8 +127,8 @@ h1 {
 
 .cart-badge {
     position: absolute;
-    top: 0;
-    right: -8px;
+    top: 33px;
+    right: 5px;
     background: red;
     color: white;
     border-radius: 50%;

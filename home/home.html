@@ -91,21 +91,22 @@
     <p> +20 101 449 8231 - +20 127 720 3437</p>
     <p> +20 127 275 5295 - +966 54 378 9813</p>
     </div>
-<script src="../cart/cart.js"></script>
-
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('formMessage').style.display = 'block';
-    this.reset();
-    setTimeout(function() {
-      document.getElementById('formMessage').style.display = 'none';
-    }, 3000);
-  });
-</script>
-
+    
   <footer class="footer">
     <p>&copy; 2025 Cafrour. All rights reserved.</p>
   </footer>
+
+  
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formMessage').style.display = 'block';
+      this.reset();
+      setTimeout(function() {
+        document.getElementById('formMessage').style.display = 'none';
+      }, 3000);
+    });
+    </script>
+    <script src="../cart/cart.js"></script>
 </body>
 </html>
