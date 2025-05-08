@@ -1,9 +1,11 @@
+*{
+  text-decoration: none;
+}
 body{
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   overflow-x: hidden;
-  text-decoration: none;
 }
 
 .header {
@@ -65,7 +67,7 @@ body{
   position: relative;
   font-size: 12px;
   top: -23px;
-    right: -20px;
+  right: -20px;
 }
 
 .products {
@@ -90,7 +92,7 @@ body{
 
 .footer {
   background-color: #0c1829;
-  color: white;
+  color: #f5f5f5;
   text-align: center;
   padding: 10px;
   margin-top: 20px;
@@ -237,5 +239,12 @@ input[type="submit"]:hover {
 p {
   text-align: center;
   margin-top: 20px;
-  color: #444;
+  color: #0c1829;
+}
+.footer p{
+  color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+
 }
