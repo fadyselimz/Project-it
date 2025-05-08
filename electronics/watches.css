@@ -104,35 +104,47 @@ h1 {
   filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
 
+/* Cart Button Styles */
 .cart-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-decoration: none;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
 }
 
 .cart-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: filter 0.3s;
-}
-.cart-badge {
-  background: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 8px;
-  position: relative;
-  top: 1px;
-  right: 24px;
-  font-size: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: filter 0.3s;
 }
 
-.cart-button:hover .cart-icon, .cart-button:active .cart-icon {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    min-width: 8px;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cart-button:hover .cart-icon, 
+.cart-button:active .cart-icon {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
 
 
@@ -288,4 +300,44 @@ body::-webkit-scrollbar-track {
     .small {
         gap: 15px;
         }
+}
+@media (max-width: 920px) {
+  .cart-icon {
+      width: 45px;
+      height: 45px;
+  }
+  .cart-badge {
+      font-size: 11px;
+      padding: 2px 5px;
+  }
+}
+
+@media (max-width: 660px) {
+  .cart-icon {
+      width: 35px;
+      height: 35px;
+  }
+  .cart-badge {
+      font-size: 10px;
+      padding: 1px 4px;
+      top: 0;
+      right: -6px;
+      min-width: 6px;
+      height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-icon {
+      width: 30px;
+      height: 30px;
+  }
+  .cart-badge {
+      font-size: 9px;
+      padding: 1px 3px;
+      top: 0;
+      right: -4px;
+      min-width: 5px;
+      height: 5px;
+  }
 }
