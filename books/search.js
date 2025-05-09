@@ -1,18 +1,62 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-input');
-    // Select all book cards (adjust selector if needed)
-    const products = document.querySelectorAll('.horror, .fantasy, .romantic, .acc, .eng');
+    
+    // Function to remove highlights from all products
+    function removeHighlights() {
+        document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc').forEach(product => {
+            product.classList.remove('highlight');
+        });
+    }
 
     searchInput.addEventListener('input', function() {
-        const query = searchInput.value.toLowerCase();
-        products.forEach(product => {
-            // Get all text content for searching
-            const text = product.textContent.toLowerCase();
-            if (text.includes(query)) {
+        const searchTerm = this.value.toLowerCase();
+        const products = document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc');
+        
+        // Remove previous highlights
+        removeHighlights();
+
+        // If search is empty, show all products and maintain layout
+        if (!searchTerm) {
+            products.forEach(product => {
                 product.style.display = '';
+            });
+            return;
+        }
+
+        let firstMatch = null;
+        
+        products.forEach(product => {
+            const productName = product.querySelector('.book-name').textContent.toLowerCase();
+            const productPrice = product.querySelector('.price').textContent.toLowerCase();
+            
+            if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                product.style.display = '';
+                product.classList.add('highlight');
+                if (!firstMatch) {
+                    firstMatch = product;
+                }
             } else {
                 product.style.display = 'none';
             }
         });
+
+        // Scroll to first match if found, with improved positioning
+        if (firstMatch) {
+            const headerOffset = 150; // Adjust based on your header height
+            const elementPosition = firstMatch.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    // Clear highlights when search is cleared
+    searchInput.addEventListener('blur', function() {
+        if (!this.value) {
+            removeHighlights();
+        }
     });
 });

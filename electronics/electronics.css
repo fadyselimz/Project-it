@@ -185,10 +185,20 @@ h1 {
 }
 
 /* Product Container Styles */
+
+.text{
+text-decoration: underline;
+font-family: "Exo 2", sans-serif;
+font-weight: 700;
+font-size: 20px;
+color: #1f3a46;
+margin-left: 10px;
+}
+
 .carry {
     background-color: #7474d5;
     height: 300px;
-    margin: 0;
+    margin: 0 20px;
     overflow-x: auto;
     overflow-y: hidden;
     border-radius: 30px;

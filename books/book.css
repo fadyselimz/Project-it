@@ -32,12 +32,12 @@ body {
 }
 
 .big {
-    background-color: #292b3c;
+    background-color: #01602ad0;
     margin-bottom: 0;
 }
 
 .small {
-    background-color: #90d3b66b;
+    background-color: #01602a;
     height: 40px;
     top: 65px;
     display: flex;
@@ -95,7 +95,7 @@ body {
 }
 
 .small a:hover {
-    color: #00bcd4;
+    color: #c2f9a6;
     cursor: pointer;
     font-size: 30px;
     transition: 0.3s;
