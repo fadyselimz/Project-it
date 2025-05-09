@@ -58,10 +58,10 @@ h1 {
   margin: 0 20px; 
 }
 .big{
-      background-color: #388e3c;
+  background-color: #388e3c;
 }
   .small{
-      background-color: #256728;
+  background-color: #256728;
   height: 40px;
   top: 65px;
   display: flex;
@@ -185,9 +185,6 @@ cursor: pointer;
     .search {
         margin: 0 100px;
     }
-    h1 {
-      font-size: 20px;
-  }
   .cart-badge {
     width: 12px;
     height: 12px;

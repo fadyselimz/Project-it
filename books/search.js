@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-input');
-    
-    // Function to remove highlights from all products
     function removeHighlights() {
         document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc').forEach(product => {
             product.classList.remove('highlight');
@@ -11,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const products = document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc');
-        
-        // Remove previous highlights
+
         removeHighlights();
 
         // If search is empty, show all products and maintain layout
@@ -26,10 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let firstMatch = null;
         
         products.forEach(product => {
-            const productName = product.querySelector('.book-name').textContent.toLowerCase();
-            const productPrice = product.querySelector('.price').textContent.toLowerCase();
-            
-            if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+            const productName = product.querySelector('.book-name').textContent.toLowerCase(); 
+            if (productName.includes(searchTerm)) {
                 product.style.display = '';
                 product.classList.add('highlight');
                 if (!firstMatch) {
@@ -53,10 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Clear highlights when search is cleared
-    searchInput.addEventListener('blur', function() {
-        if (!this.value) {
-            removeHighlights();
-        }
-    });
+
 });

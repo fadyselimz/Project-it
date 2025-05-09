@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 .quot {
-  margin-left: 400px;
+  margin-left: 375px;
   margin-right: 380px;
 }
 .header {
@@ -21,7 +21,7 @@ body {
   justify-content: center;
 }
 .logo {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
 }
 .navbar {
@@ -40,6 +40,7 @@ body {
 }
 .sections li {
   margin-left: 20px;
+  font-weight: bold;
 }
 .sections a {
   color: #f5f5f5;
