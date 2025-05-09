@@ -1,7 +1,6 @@
-/* Import Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Reset and Base Styles */
 * {
     padding: 0;
 }
@@ -174,15 +173,6 @@ h1 {
     filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
 
-.cart-container {
-    position: relative;
-    display: inline-block;
-}
-
-.cart-button:hover .cart-icon, 
-.cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-}
 
 /* Product Container Styles */
 
@@ -209,7 +199,6 @@ margin-left: 10px;
     display: flex;
     align-items: center;
     height: 100%;
-    background-color: transparent;
     padding: 10px;
     gap: 10px;
 }
@@ -219,18 +208,47 @@ margin-left: 10px;
     display: grid;
     width: 140px;
     height: 93%;
-    box-shadow: none;
     grid-template-columns: 1fr;
     flex: 0 0 auto;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 13px;
-    border: #a7a2a2 1px ridge;
     background-color: #fff;
     justify-content: center;
     font-family: "Exo 2", sans-serif;
 }
 
+/* Product Details Styles */
+.primg{
+    text-align: center;
+}
+
+.primg img{
+    height: 125px;
+    align-self: center;
+}
+.name {
+    width: 150px;
+    height: 60px;
+}
+
+.name h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.price {
+    height: 60px;
+    width: 100%;
+}
+
+.price h3 {
+    color: royalblue;
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
 .product button {
     background: #FFD814;
     border: 1px solid #FCD200;
@@ -239,9 +257,10 @@ margin-left: 10px;
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
-    margin: 0;
     margin-top: 10px;
-    transition: 0.5s;
+    align-items: center;
+    width: 100%;
+    transition: 0.3s;
 }
 
 .product:hover {
@@ -256,74 +275,22 @@ margin-left: 10px;
 }
 
 /* Product Image Styles */
-.primg,
-.phimg {
-    text-align: center;
-}
 
-.primg img,
-.phimg img {
-    width: auto;
-    height: 125px;
-    align-self: center;
-}
-
-/* Product Details Styles */
-.name {
-    max-width: 150px;
-    height: 60px;
-    margin: 0;
-}
-
-.name h3 {
-    margin: 0;
-    font-weight: bold;
-}
-
-.price {
-    height: 60px;
-    width: 100%;
-}
-
-.price button {
-    align-items: center;
-    width: 100%;
-}
-
-.price h3 {
-    color: royalblue;
-    margin: 0;
-    font-weight: bold;
-    text-align: right;
-    font-style: italic;
-}
 
 /* Scrollbar Styles */
 body::-webkit-scrollbar {
     width: 8px;
 }
 
-body::-webkit-scrollbar-thumb {
-    background: #0c0f56c6;
-    border-radius: 4px;
-}
-
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
 .carry::-webkit-scrollbar {
     height: 8px;
 }
 
-.carry::-webkit-scrollbar-thumb {
+.carry::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
     background: #0c0f56c6;
     border-radius: 4px;
 }
 
-.carry::-webkit-scrollbar-track {
-    background: transparent;
-}
 
 /* Special Product Styles */
 #ultra img {
