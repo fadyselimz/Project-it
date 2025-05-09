@@ -1,26 +1,19 @@
-/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Reset and Base Styles */
 * {
-    padding: 0;
+    margin: 0px;
+ padding: 0px;
+ text-decoration: none;
 }
 
 body {
     background-color: #f5f5f5;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
     border-radius: 10px;
-    margin: 0;
 }
 
-/* Navigation Styles */
 .nav {
     display: flex;
     font-family: "Exo 2", sans-serif;
     font-weight: 700;
-    margin: 0;
     height: 70px;
     align-items: center;
     justify-content: center;
@@ -33,7 +26,6 @@ body {
 
 .big {
     background-color: #5a8868;
-    margin-bottom: 0;
 }
 
 .small {
@@ -48,8 +40,6 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
 }
-
-/* Search Bar Styles */
 .search {
     width: 50%;
     display: flex;
@@ -62,15 +52,12 @@ body {
     margin: 0 140px;
     transition: box-shadow 0.3s;
 }
-
 .search:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-
 .search img {
     width: 30px;
 }
-
 .search-input {
     font-size: 18px;
     font-family: "Exo 2", sans-serif;
@@ -80,84 +67,58 @@ body {
     background-color: transparent;
     flex: 1;
 }
-
 .search-input::placeholder {
     color: rgba(0, 0, 0, 0.5);
     font-size: 18px;
     font-family: "Exo 2", sans-serif;
 }
-
-/* Navigation Links */
 .small a {
     color: #ececec;
-    text-decoration: none;
     color: rgb(0, 0, 0);
 }
-
 .small a:hover {
     color: #c2f9a6;
     cursor: pointer;
     font-size: 30px;
     transition: 0.3s;
 }
-
-/* Header Text */
 h1 {
     margin: 0 20px;
     color: #ececec;
 }
-
-/* Home Button Styles */
 .home-button {
-    background: none;
     border: none;
     cursor: pointer;
     z-index: 2;
     margin-left: 10px;
     margin-right: 10px;
 }
-
 .home-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     transition: filter 0.3s;
 }
-
 .home-button:hover .home-icon,
 .home-button:active .home-icon {
     filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
-
-/* Cart Button Styles */
 .cart-button {
-    background: none;
-    border: none;
     cursor: pointer;
     z-index: 2;
     margin-left: 10px;
     margin-right: 10px;
-    text-decoration: none;
-    position: relative;
 }
-
 .cart-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     transition: filter 0.3s;
 }
-
 .cart-button:hover .cart-icon, 
 .cart-button:active .cart-icon {
     filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
-
-.cart-container {
-    position: relative;
-    display: inline-block;
-}
-
 .cart-badge {
   background: red;
   color: white;
@@ -168,12 +129,6 @@ h1 {
   right: 24px;
   font-size: 12px;
 }
-
-.cart-button:hover .cart-icon, 
-.cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-}
-
 .add-to-cart{
     background-color: #94a57d;
     color: white;
@@ -183,16 +138,14 @@ h1 {
     border-radius: 80px;
     cursor: pointer;
     transition: background-color 0.3s;
-    transition: 0.4s;
+    transition: 0.3s;
     margin-left: 30px;
 }
-
 .add-to-cart:hover {
     background-color: #e65c00;
     width: auto;
     height: 42px;
   }
-
 .horror1 img,
 .fantasy1 img,
 .romantic1 img,
@@ -203,7 +156,6 @@ h1 {
     width: auto;
     transition: 0.3s;
 }
-
 .horror1 img:hover,
 .fantasy1 img:hover,
 .romantic1 img:hover,
@@ -212,7 +164,6 @@ h1 {
     height: 155px;
     width: auto;
 }
-
 .h3{
     height:auto;
     display: inline-block;
@@ -221,22 +172,12 @@ h1 {
    margin-left: 40px;
     
 }
-
 .price button{
     align-self: end;
 }
-
-.book-name{
-    margin-left: 30px;
-    
-}
-
-
-.price{
-    margin-left: 30px;
-    
-}
-
+.book-name,.price{
+        margin-left: 30px;
+    }
 .horror-tytle , .fantasy-tytle ,.romantic-tytle , .acc-tytle , .eng-tytle {
     border: solid 4px black;
     margin-bottom: 20px;
@@ -247,33 +188,24 @@ h1 {
     margin-top: 60px;
     padding-left: 15px; ;
 }
-
 .horror-background , .fantasy-background , .romantic-background , .acc-background , .eng-background{
     background-color: #d2c8c8;
     height: 340px;
- 
  border-radius: 20px;
  box-shadow: 8px 8px 10px 6px rgba(106, 104, 104, 0.844);
  overflow-x: auto;
  overflow-y: hidden;
- margin: 0px;
- padding: 0px;
  padding-bottom:30px ;
  align-self:center;
 }
- 
 .horror-care , .fantasy-care , .romantic-care ,.acc-care ,.eng-care{
     justify-content:left;
     display: flex;
     align-items: center;
-    height: 100%;
-    background-color: transparent;
     padding: 10px;
     gap: 25px;    
 }
-
-
-.horror , .fantasy , .romantic , .acc ,.eng{/*الديف ال شايل الصوره و ال سعر*/
+.horror , .fantasy , .romantic , .acc ,.eng{
     border: solid 3px black;
     display: inline-block;
     background-color: #d2c8c8;
@@ -282,10 +214,8 @@ h1 {
  height:340px ;
  border-radius: 8px;
  grid-template-rows: repeat(4,auto);
-
 }
 .horror1 , .fantasy1 , .romantic1 , .acc1 ,.eng1{
-    /*الديف ال شايل الصوره*/
     border: solid 5px black;
     width: fit-content;
     max-height: 90%;
@@ -293,29 +223,9 @@ h1 {
     margin-top: 20px;
     margin: auto;
     box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
-    padding: 0;
-    display: flex;
-    
-    
+    display: flex; 
 }
-/* english */
-
-
-
-.eng-background{
-   
-}
-
-
-
-
-.eng{/*الديف ال شايل الصوره و ال سعر*/
-   
-
-}
-
 .eng1{
-    /*الديف ال شايل الصوره*/
     border: solid 5px black;
     width: fit-content;
     max-height: 90%;
@@ -323,10 +233,8 @@ h1 {
     margin-top: 20px;
     margin: auto;
     box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
-    padding: 0;
     display: flex;
 }
-
 .highlight {
     box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
     transform: scale(1.02);
