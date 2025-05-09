@@ -15,7 +15,6 @@ body {
   background-color: #388e3c;
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
-  margin: 0;
   height: 70px;
   align-items: center;
   justify-content: center;
@@ -60,7 +59,6 @@ h1 {
 }
 .big{
       background-color: #388e3c;
-      margin-bottom: 0;
 }
   .small{
       background-color: #256728;
@@ -76,7 +74,6 @@ h1 {
   }
   .small a{
       color: rgb(27, 27, 44);
-      text-decoration: none;
   }
   .small a:hover{
       color: #00fb75;
@@ -85,47 +82,32 @@ h1 {
       transition: 0.3s;
   }
 .home-button {
-  background: none;
-  border: none;
   cursor: pointer;
   z-index: 2;
   margin-left: 10px;
   margin-right: 10px;
 }
-
 .home-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: filter 0.3s;
-
 }
-
 .home-button:hover .home-icon, .home-button:active .home-icon {
   filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
-
 .cart-button {
-  background: none;
-  border: none;
   cursor: pointer;
   z-index: 2;
   margin-left: 10px;
   margin-right: 10px;
-  
 }
-
 .cart-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   transition: filter 0.3s;
 }
-
-.cart-button:hover .cart-icon, .cart-button:active .cart-icon {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-}
-
 .cart-badge {
   background: red;
   color: white;
@@ -136,14 +118,15 @@ h1 {
   right: 24px;
   font-size: 12px;
 }
+.cart-button:hover .cart-icon, .cart-button:active .cart-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+}
 .products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
   gap: 20px;
   justify-items: center;
 }
-
-
 .product-card {
   background: #ffffff;
   padding: 15px;
@@ -154,34 +137,27 @@ h1 {
   width: 100%;
   max-width: 220px;
 }
-
 .product-card:hover {
   transform: translateY(-5px);
-
 }
-
-
 .product-card img {
   width: 100%;
   height: 180px;
   object-fit: contain;
   margin-bottom: 10px;
 }
-
 .product-card h2 {
   font-size: 16px;
   margin: 10px 0;
   height: 40px;
   overflow: hidden;
 }
-
 .product-card p {
   font-size: 18px;
   font-weight: bold;
   color: #B12704;
   margin: 10px 0;
 }
-
 .product-card button {
   background: #FFD814;
   border: 1px solid #FCD200;
@@ -200,7 +176,6 @@ cursor: pointer;
 .categories:hover {
 cursor: pointer;
 }
-
 .highlight {
   box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
   transform: scale(1.02);
