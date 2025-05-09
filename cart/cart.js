@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let price = productCard.querySelector('.price, p')?.textContent?.trim() || '';
             let img = productCard.querySelector('img')?.getAttribute('src') || '';
             addToCart({ name, price, img });
-            alert('Added to cart!');
         });
     });
     updateCartBadge();
