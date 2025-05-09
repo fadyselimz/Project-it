@@ -197,55 +197,110 @@ h3,.price,.add-to-cart{
     transition: all 0.3s ease;
 }
 @media (max-width: 5000px) {
-  .products-grid {
-    grid-template-columns: repeat(5, 1fr);
+    .search {
+        margin: 0 100px;
+    }
+    h1 {
+      font-size: 20px;
   }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
 }
-
-@media (max-width: 1360px) {
-  .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
-
-@media (max-width: 900px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+    .search {
+        margin: 0 50px;
+    }
+    h1 {
+      font-size: 20px;
   }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
 }
-
-@media (max-width: 400px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
 }
-@media (max-width: 600px) {
-  .small {
-    font-size: 15px;
+@media (max-width: 1000px) {
+    .search {
+        margin: 0 30px;
+    }
+    h1 {
+      font-size: 20px;
   }
-  .small a {
-    font-size: 15px;
-  }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
+}
 }
 @media (max-width: 920px) {
-  .search{
-      margin: 0 20px;
+  
+    .search {
+        margin: 0 20px;
+    }
+    h1 {
+      font-size: 20px;
   }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
 }
-@media(max-width: 660px) {
-  .search-input{
-      width: 60px;
-      font-size: 13px;
-  }
-  .home-icon{
-      width: 30px;
-      height: 30px;
-  }
-  .cart-icon{
-      width: 40px;
-      height: 40px;
-  }
-  .nav{
-      gap: 10px;
-  }
 }
+
+@media (max-width: 850px) {
+
+    .search {
+        margin: 0 5px;
+        width: 40%;
+    }
+    h1 {
+      font-size: 20px;
+  }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
+}
+}
+@media (max-width: 650px) {
+
+    .search {
+        margin: 0 5px;
+        width: 30%;
+    }
+    h1 {
+      font-size: 15px;
+  }
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+        top: -6px;
+        right: 29px;
+    font-size: 10px;
+    padding: 1px 4px;
+}
+}
+
+
+
+
+
+
