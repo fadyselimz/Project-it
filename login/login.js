@@ -23,7 +23,8 @@ function login() {
     
     if (user) {
         document.getElementById('loginForm').classList.remove('active');
-        window.open(urlToOpen);
+        window.location.href = urlToOpen;
+
     } else {
         document.getElementById('loginError').textContent = 'Wrong email or password';
     }
@@ -54,3 +55,15 @@ function logout() {
     showTab('login');
     document.getElementById('loginPass').value = '';
 }
+
+ document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const inputs = Array.from(document.querySelectorAll('input'));
+            const currentIndex = inputs.indexOf(document.activeElement);
+    
+            if (currentIndex !== -1 && currentIndex < inputs.length - 1) {
+                event.preventDefault(); 
+                inputs[currentIndex + 1].focus();
+            }
+        }
+    });

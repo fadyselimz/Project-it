@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         products.forEach(product => {
             const productName = product.querySelector('.name h3').textContent.toLowerCase();
-            const productPrice = product.querySelector('.price h3').textContent.toLowerCase();
             
-            if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+            if (productName.includes(searchTerm)) {
                 product.style.display = '';
                 product.classList.add('highlight');
                 if (!firstMatch) {
@@ -53,10 +52,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Clear highlights when search is cleared
-    searchInput.addEventListener('blur', function() {
-        if (!this.value) {
-            removeHighlights();
-        }
-    });
 });

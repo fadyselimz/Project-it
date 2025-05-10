@@ -1,20 +1,16 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     function getCart() {
         return JSON.parse(localStorage.getItem('cart')) || [];
     }
-
     function saveCart(cart) {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
-
     function addToCart(product) {
         const cart = getCart();
         cart.push(product);
         saveCart(cart);
         updateCartBadge();
     }
-
     function updateCartBadge() {
         const cart = getCart();
         const badge = document.querySelector('.cart-badge');
@@ -22,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             badge.textContent = cart.length;
         }
     }
-
-    // Attach event listeners to all add-to-cart buttons
     document.querySelectorAll('.add-to-cart').forEach(function(button) {
         button.addEventListener('click', function() {
             const productCard = button.closest('.product, .product-card, .acc, .eng, .horror, .fantasy, .romantic');
@@ -32,14 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
             let price = productCard.querySelector('.price, p')?.textContent?.trim() || '';
             let img = productCard.querySelector('img')?.getAttribute('src') || '';
             addToCart({ name, price, img });
-            alert('Added to cart!');
         });
     });
-
-    // Update badge on page load
     updateCartBadge();
-
-    // Cart page logic
     if (document.getElementById('cart-table')) {
         renderCart();
         document.getElementById('clear-cart').addEventListener('click', function() {
@@ -51,11 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const confirmPaymentButton = document.getElementById('confirm-payment');
         const cartTableBody = document.querySelector('#cart-table tbody');
         const visaDetails = document.getElementById('visa-details');
-
         checkoutButton.addEventListener('click', function() {
             paymentOptions.style.display = 'block';
         });
-
         document.querySelectorAll('input[name="payment-method"]').forEach(function(elem) {
             elem.addEventListener('change', function() {
                 if (this.value === 'visa') {
@@ -65,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-
         confirmPaymentButton.addEventListener('click', function() {
             const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
             if (selectedPaymentMethod) {
@@ -74,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const cardNumber = document.querySelector('input[name="card-number"]').value;
                     const expiryDate = document.querySelector('input[name="expiry-date"]').value;
                     const cvv = document.querySelector('input[name="cvv"]').value;
-
                     if (!cardholderName.match(/^[A-Za-z\s]+$/)) {
                         alert('Please enter a valid cardholder name.');
                         return;
@@ -91,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         alert('Please enter a valid 3-digit CVV.');
                         return;
                     }
-
                     alert('Visa payment selected. Details are correct.');
                 } else {
                     alert(`You have selected ${selectedPaymentMethod.value} as your payment method.`);
@@ -101,14 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     cartTableBody.removeChild(cartTableBody.firstChild);
                 }
                 updateCartBadge();
-                // Add this line to reset the total price
                 document.getElementById('cart-total').innerHTML = '<strong>Total: 0.00 EGP</strong>';
             } else {
                 alert('Please select a payment method.');
             }
         });
     }
-
     function renderCart() {
         const cart = getCart();
         const tbody = document.querySelector('#cart-table tbody');
@@ -128,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.getElementById('cart-total').innerHTML = `<strong>Total: ${total.toFixed(2)} EGP</strong>`;
     }
-
     window.removeFromCart = function(idx) {
         const cart = getCart();
         cart.splice(idx, 1);
