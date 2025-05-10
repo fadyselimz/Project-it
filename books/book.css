@@ -135,7 +135,6 @@ width: auto;
 h3{
 height:auto;
 font-weight: bold;
-grid-area: price;
 margin-top: 5px;
 justify-content: left;
 margin-bottom:5px;
@@ -148,7 +147,6 @@ margin-left: 30px;
 font-size: 22px; 
  }
 .add-to-cart{
-position: sticky;
 bottom: 42px;
 background-color: #94a57d;
 color: white;
@@ -160,7 +158,6 @@ cursor: pointer;
 transition: background-color 0.3s;
 transition: 0.3s;
 justify-self: center;
-margin-left: 40px;
 }
 .add-to-cart:hover {
 background-color: #e65c00;
@@ -179,25 +176,29 @@ margin-top: 60px;
 padding-left: 15px;
 }
 .carry{
-background-color: #e65c00;
+background-color: #375524;
 overflow-x: auto;
 overflow-y: hidden;
 justify-content:left;
 display: flex;
 align-items: center;
-padding: 10px;
+padding: 20px;
+margin: 0 20px;
 gap: 25px;  
 height: 400px;  
 }
 .book{
+display: grid;
+grid-template-columns: 1fr;
 border: solid 3px black;
 background-color: #d2c8c8;
 flex: 0 0 auto;
-width: 13%;
+width: 15%;
 height:95%;
 border-radius: 8px;
 justify-content: center;
 align-items: center;
+padding: 10px 5px;
 }
 .eng{
     width:15%;
@@ -206,7 +207,6 @@ align-items: center;
 border: solid 5px black;
 width: fit-content;
 max-height: 90%;
-grid-area: kof1;
 margin-top: 20px;
 margin: auto;
 box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
@@ -216,7 +216,6 @@ display: flex;
 border: solid 5px black;
 width: fit-content;
 max-height: 90%;
-grid-area: kof1;
 margin-top: 20px;
 margin: auto;
 box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);

@@ -86,11 +86,7 @@ body {
     font-size: 18px;
     font-family: "Exo 2", sans-serif;
 }
-.products-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+
 /* Navigation Links */
 .small a {
     color: #ececec;
