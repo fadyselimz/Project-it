@@ -33,30 +33,37 @@ body {
   }
   input {
     width: 100%;
-    padding:
-  10px;
-    margin:
-  8px 0px;
+    padding: 8px;
+    margin: 8px 0px;
     box-sizing: border-box;
-    border-radius:
-  4px;
-    border:
-  10px rgb(204, 204, 204);
+    border-radius:4px;
+    border: 1px solid rgb(204, 204, 204); 
   }
   .my-btn {
-    background:
-  rgb(255, 153, 0);
+    background: rgb(255, 153, 0);
     border-radius:10px;
-  cursor: pointer;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+     border: none;
+      width: 100%;
   }
-  
-  body { font-family: Arial; max-width: 300px; margin: 0 auto; padding: 20px; }
-  .tab { padding: 10px; cursor: pointer; }
-  .active { background:
-    rgb(0, 128, 128);border-radius: 15px; color: white; }
-  #loginForm, #signupForm { display: none; padding:
-    30px;}
-  #loginForm.active, #signupForm.active { display: block; }
-  input { width: 100%; padding: 8px; margin: 5px 0; }
-  button { background: #4CAF50; color: white; padding: 10px; border: none; width: 100%; }
-  #welcome { display: none; text-align: center; }
+.my-btn:hover{
+      background: rgb(188, 194, 26);
+      transition: 0.3s;
+      color: black;
+} 
+
+
+  .tab { 
+    padding: 10px;
+     cursor: pointer; 
+  }
+  #loginForm, #signupForm {
+     display: none; 
+     padding:30px;
+    }
+  #loginForm.active, #signupForm.active {
+     display: block;
+     }
+
