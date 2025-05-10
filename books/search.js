@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-input');
     function removeHighlights() {
-        document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc').forEach(product => {
+        document.querySelectorAll('.book').forEach(product => {
             product.classList.remove('highlight');
         });
     }
 
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
-        const products = document.querySelectorAll('.horror, .fantasy, .romantic, .eng, .acc');
+        const products = document.querySelectorAll('.book');
 
         removeHighlights();
 

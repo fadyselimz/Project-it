@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.querySelectorAll('.add-to-cart').forEach(function(button) {
         button.addEventListener('click', function() {
-            const productCard = button.closest('.product, .product-card, .acc, .eng, .horror, .fantasy, .romantic');
+            const productCard = button.closest('.product, .product-card, .book');
             if (!productCard) return;
-            let name = productCard.querySelector('h3, .book-name')?.textContent?.trim() || '';
+            let name = productCard.querySelector('h3')?.textContent?.trim() || '';
             let price = productCard.querySelector('.price, p')?.textContent?.trim() || '';
             let img = productCard.querySelector('img')?.getAttribute('src') || '';
             addToCart({ name, price, img });

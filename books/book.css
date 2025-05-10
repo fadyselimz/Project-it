@@ -1,335 +1,231 @@
-/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Reset and Base Styles */
 * {
-    padding: 0;
+margin: 0px;
+padding: 0px;
+text-decoration: none;
 }
-
 body {
-    background-color: #f5f5f5;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    border-radius: 10px;
-    margin: 0;
+background-color: #f5f5f5;
 }
-
-/* Navigation Styles */
 .nav {
-    display: flex;
-    font-family: "Exo 2", sans-serif;
-    font-weight: 700;
-    margin: 0;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    top: 0;
-    z-index: 1000;
-    padding: 0 20px;
-    padding-left: 10px ;
+display: flex;
+font-family: "Exo 2", sans-serif;
+font-weight: 700;
+height: 70px;
+align-items: center;
+justify-content: center;
+gap: 20px;
+top: 0;
+z-index: 1000;
+padding: 0 20px;
+padding-left: 10px ;
 }
-
 .big {
-    background-color: #5a8868;
-    margin-bottom: 0;
+background-color: #5a8868;
 }
-
 .small {
-    background-color: #5a8868d4;
-    height: 40px;
-    top: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
+ background-color: #5a8868d4;
+height: 40px;
+top: 65px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+font-size: 20px;
+font-weight: 700;
+margin-bottom: 30px;
 }
-
-/* Search Bar Styles */
 .search {
-    width: 50%;
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    align-items: center;
-    background-color: #f6f6f6;
-    padding: 10px;
-    border-radius: 30px;
-    margin: 0 140px;
-    transition: box-shadow 0.3s;
+width: 50%;
+display: flex;
+justify-self: center;
+justify-content: center;
+align-items: center;
+background-color: #f6f6f6;
+padding: 10px;
+border-radius: 30px;
+margin: 0 140px;
+transition: box-shadow 0.3s;
 }
-
-.search:focus-within {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+.search:focus-within{
+box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-
 .search img {
-    width: 30px;
+width: 30px;
 }
-
 .search-input {
-    font-size: 18px;
-    font-family: "Exo 2", sans-serif;
-    margin-left: 10px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    flex: 1;
+font-size: 18px;
+font-family: "Exo 2", sans-serif;
+margin-left: 10px;
+border: none;
+outline: none;
+background-color: transparent;
+flex: 1;
 }
-
 .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    font-family: "Exo 2", sans-serif;
+color: rgba(0, 0, 0, 0.5);
+font-size: 18px;
+font-family: "Exo 2", sans-serif;
 }
-
-/* Navigation Links */
 .small a {
-    color: #ececec;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+color: #ececec;
+color: rgb(0, 0, 0);
 }
-
 .small a:hover {
-    color: #c2f9a6;
-    cursor: pointer;
-    font-size: 30px;
-    transition: 0.3s;
+color: #c2f9a6;
+cursor: pointer;
+font-size: 30px;
+transition: 0.3s;
 }
-
-/* Header Text */
 h1 {
-    margin: 0 20px;
-    color: #ececec;
+margin: 0 20px;
+color: #ececec;
 }
-
-/* Home Button Styles */
 .home-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    margin-left: 10px;
-    margin-right: 10px;
+cursor: pointer;
+z-index: 2;
+margin-left: 10px;
+margin-right: 10px;
 }
-
 .home-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: filter 0.3s;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+transition: filter 0.3s;
 }
-
 .home-button:hover .home-icon,
 .home-button:active .home-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
-
-/* Cart Button Styles */
 .cart-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
-    position: relative;
+cursor: pointer;
+z-index: 2;
+margin-left: 10px;
+margin-right: 10px;
 }
-
 .cart-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: filter 0.3s;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+transition: filter 0.3s;
 }
-
-.cart-button:hover .cart-icon, 
-.cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
-}
-
-.cart-container {
-    position: relative;
-    display: inline-block;
-}
-
 .cart-badge {
-  background: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 8px;
-  position: relative;
-  top: 1px;
-  right: 24px;
-  font-size: 12px;
+background: red;
+color: white;
+border-radius: 50%;
+padding: 2px 8px;
+position: relative;
+top: 1px;
+right: 24px;
+font-size: 12px;
 }
-
 .cart-button:hover .cart-icon, 
 .cart-button:active .cart-icon {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
+filter: brightness(0) saturate(100%) invert(70%) sepia(22%) saturate(477%) hue-rotate(172deg) brightness(93%) contrast(90%);
 }
-
-.add-to-cart{
-    background-color: #94a57d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 80px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    transition: 0.4s;
-    margin-left: 40px;
+.horror1 img,.fantasy1 img,.romantic1 img,.acc1 img ,.eng1 img {
+height: 130px;
+width: auto;
+transition: 0.3s;
 }
-
-.add-to-cart:hover {
-    background-color: #e65c00;
-    width: auto;
-    height: 42px;
-  }
-
-.horror1 img,
-.fantasy1 img,
-.romantic1 img,
-.acc1 img ,
-.eng1 img {
-
-    height: 115px;
-    width: 80px;
-    transition: 0.3s;
+.horror1 img:hover,.fantasy1 img:hover,.romantic1 img:hover,.acc1 img:hover,.eng1 img:hover{
+ height: 155px;
+width: auto;
 }
-
-.horror:hover,
-.fantasy:hover,
-.romantic:hover,
-.acc:hover ,
-.eng:hover {
-    /* height: 140px;
-    width: auto; */
- margin-top: 5px;
+h3{
+height:auto;
+font-weight: bold;
+grid-area: price;
+margin-top: 5px;
+justify-content: left;
+margin-bottom:5px;
 }
-
-.h3{
-    height:auto;
-    display: inline-block;
-    grid-area: price;
-    margin-bottom:15px ;
-   margin-left: 40px;
-    
-}
-
 .price button{
-    align-self: end;
+align-self: end;
+}
+.book-name,.price{
+margin-left: 30px;
+font-size: 22px; 
+ }
+.add-to-cart{
+position: sticky;
+bottom: 42px;
+background-color: #94a57d;
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 1rem;
+border-radius: 80px;
+cursor: pointer;
+transition: background-color 0.3s;
+transition: 0.3s;
+justify-self: center;
+margin-left: 40px;
+}
+.add-to-cart:hover {
+background-color: #e65c00;
+width: auto;
+height: 42px;
 }
 
-.book-name{
-    margin-left: 35px;
-    max-width: 90%;
-    justify-content: center;
-    
+.horror-title , .fantasy-title ,.romantic-title , .acc-title , .eng-title {
+border: solid 4px black;
+margin-bottom: 20px;
+background-color: #c2f5d1;
+box-sizing: border-box;
+height:auto;
+border-radius: 25px; 
+margin-top: 60px;
+padding-left: 15px;
 }
-
-
-.price{
-    margin-left: 30px;
-    
+.carry{
+background-color: #e65c00;
+overflow-x: auto;
+overflow-y: hidden;
+justify-content:left;
+display: flex;
+align-items: center;
+padding: 10px;
+gap: 25px;  
+height: 400px;  
 }
-
-.horror-tytle , .fantasy-tytle ,.romantic-tytle , .acc-tytle , .eng-tytle {
-    border: solid 4px black;
-    margin-bottom: 20px;
-    background-color: #c5ddce;
-    box-sizing: border-box;
-    height:auto;
-    border-radius: 25px; 
-    margin-top: 60px;
-    padding-left: 15px; 
+.book{
+border: solid 3px black;
+background-color: #d2c8c8;
+flex: 0 0 auto;
+width: 13%;
+height:95%;
+border-radius: 8px;
+justify-content: center;
+align-items: center;
 }
-
-.horror-background , .fantasy-background , .romantic-background , .acc-background , .eng-background{
-    background-color: #d2c8c8;
-    height: 27%;
- /* width: 100%; */
- border-radius: 20px;
- box-shadow: 8px 8px 10px 6px rgba(106, 104, 104, 0.844);
- overflow-x: auto;
- overflow-y: hidden;
- margin: 0px;
- padding: 0px;
- padding-bottom:30px ;
- align-self:center;
-}
- 
-.horror-care , .fantasy-care , .romantic-care ,.acc-care ,.eng-care{
-    justify-content:left;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    background-color: transparent;
-    padding: 10px;
-    gap: 25px;    
-    
-}
-
-
-.horror , .fantasy , .romantic , .acc ,.eng{/*الديف ال شايل الصوره و ال سعر*/
-    border: solid 3px black;
-    display: inline-block;
-    background-color: #d2c8c8;
-    flex: 0 0 auto;
- width: 13%;
- height:80% ;
- border-radius: 8px;
- grid-template-rows: repeat(4,auto);
- margin-top: 13px;
-
+.eng{
+    width:15%;
 }
 .horror1 , .fantasy1 , .romantic1 , .acc1 ,.eng1{
-    /*الديف ال شايل الصوره*/
-    border: solid 5px black;
-    width: fit-content;
-    max-height: 90%;
-    max-width: 90%;
-    margin-top: 20px;
-    margin: auto;
-    box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
-    padding: 0;
-    display: flex;
-    margin-top: 10px;
-    
-    
+border: solid 5px black;
+width: fit-content;
+max-height: 90%;
+grid-area: kof1;
+margin-top: 20px;
+margin: auto;
+box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
+display: flex; 
 }
-/* english */
-
-
-
-.eng-background{
-    height: 370px; 
-}
-
-
-
-
-.eng{/*الديف ال شايل الصوره و ال سعر*/
-   
-height: 370px;
-width: 15%;
-}
-
 .eng1{
-    /*الديف ال شايل الصوره*/
- max-height: 90%;
+border: solid 5px black;
+width: fit-content;
+max-height: 90%;
+grid-area: kof1;
+margin-top: 20px;
+margin: auto;
+box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
+display: flex;
 }
-
 .highlight {
-    box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
-    transform: scale(1.02);
-    transition: all 0.3s ease;
+box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
+transform: scale(1.02);
+transition: all 0.3s ease;
 }
 @media (max-width: 5000px) {
     .search {
@@ -351,9 +247,6 @@ width: 15%;
     .search {
         margin: 0 50px;
     }
-    h1 {
-      font-size: 20px;
-  }
   .cart-badge {
     width: 12px;
     height: 12px;
@@ -433,5 +326,3 @@ width: 15%;
     padding: 1px 4px;
 }
 }
-
-
