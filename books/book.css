@@ -184,7 +184,7 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s;
     transition: 0.4s;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .add-to-cart:hover {
@@ -228,7 +228,7 @@ h1 {
 }
 
 .book-name{
-    margin-left: 30px;
+    margin-left: 35px;
     max-width: 90%;
     justify-content: center;
     
