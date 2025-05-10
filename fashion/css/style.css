@@ -156,21 +156,23 @@ h1 {
     padding: 20px;
     width: 180px;
     height: 400px;
-    flex: 0 0 auto;
+    flex: 0 auto auto;
     gap: 10px;
 }
 
 
 
 .add-to-cart{
-  width: 95%;
+  width: 120px;
   height: 40px;
   margin: 0;
-align-self: end;
+  align-self: end;
+  justify-self: center;
 }
 
 .product img{
     height: 140px;
+    justify-self: center;
     transition: 0.3s;
     transform: 0.3s;
 }
@@ -178,7 +180,7 @@ align-self: end;
 .shoes img{
   height: auto;
   width: 120px;
-  align-self: start;
+  align-self: center;
 }
 
 .cap img{
