@@ -211,15 +211,15 @@ h1 {
   margin: 0;
   font-weight: bold;
 }
-.price{
+.price-box{
   height: 60px;
   width: 100%;
 }
-.price button{
+.price-box button{
   align-items: center;
   width: 100%;
  }
-.price h3{
+.price-box h3{
   color: royalblue;
   margin: 0;
   text-align: right;
@@ -244,65 +244,9 @@ body::-webkit-scrollbar-track {
   box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
   transform: scale(1.02);
   transition: all 0.3s ease;
-}
-                  
+}             
+         
 
-.product button:hover{
-  background-color: #ff9d14;
-  border: 1px solid #c77708;
-}
-.primg{
-  text-align: center;
-}   
-.primg img{
-  width: auto;
-  height: 100px;
-  align-self: center;
-}
-.name{
-  max-width: 150px;
-  height: 60px;
-  margin: 0;
-}
-.name h3{
-  margin: 0;
-  font-weight: bold;
-}
-.price{
-  height: 60px;
-  width: 100%;
-}
-.price button{
-  align-items: center;
-  width: 100%;
- }
-.price h3{
-  color: royalblue;
-  margin: 0;
-  text-align: right;
-  font-style: italic;
-  font-size: 25px;
-}
-
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #0c0f56c6;
-  border-radius: 4px;
-}
-
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.highlight {
-  box-shadow: 0 0 15px rgba(255, 243, 205, 0.8);
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-}
-                  
 @media (max-width: 5000px) {
   .carry {
     grid-template-columns: repeat(4, 1fr);

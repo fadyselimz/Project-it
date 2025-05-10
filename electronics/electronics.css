@@ -218,6 +218,12 @@ margin-left: 10px;
     font-family: "Exo 2", sans-serif;
 }
 
+.product:hover {
+    transform: translateY(-5px) translateX(-5px);
+    box-shadow: #333 5px 5px 15px;
+    border-radius: 13px;
+}
+
 /* Product Details Styles */
 .primg{
     text-align: center;
@@ -237,12 +243,12 @@ margin-left: 10px;
     font-weight: bold;
 }
 
-.price {
+.price-box {
     height: 60px;
     width: 100%;
 }
 
-.price h3 {
+.price-box h3 {
     color: royalblue;
     margin: 0;
     font-weight: bold;
@@ -263,11 +269,6 @@ margin-left: 10px;
     transition: 0.3s;
 }
 
-.product:hover {
-    transform: translateY(-5px) translateX(-5px);
-    box-shadow: #333 5px 5px 15px;
-    border-radius: 13px;
-}
 
 .product button:hover {
     background-color: #ff9d14;
@@ -318,7 +319,7 @@ body::-webkit-scrollbar {
     object-fit: contain;
 }
 
-.laptops .price {
+.laptops .price-box {
     align-content: center;
 }
 .highlight {
