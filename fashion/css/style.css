@@ -7,7 +7,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: #f5f5f5;
     overflow-x: hidden;
 }
 .nav{
@@ -33,7 +32,7 @@ body{
   background-color: #f6f6f6;
   padding: 10px;
   border-radius: 30px;
-  margin: 0 140px;
+  margin: 0 100px 0 70px;
   transition: box-shadow 0.3s;
 }
 .search:focus-within{
@@ -81,7 +80,7 @@ h1 {
       text-decoration: none;
   }
   .small a:hover{
-      color: #00bcd4;
+      color: #ff0059;
       cursor: pointer;
       font-size: 30px;
       transition: 0.3s;
@@ -149,6 +148,7 @@ h1 {
 
 .product{
     display: grid;
+    background-color: #f6f6f6;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -156,6 +156,7 @@ h1 {
     padding: 20px;
     width: 180px;
     height: 400px;
+    border-radius: 20px;
     flex: 0 auto auto;
     gap: 10px;
 }
@@ -189,6 +190,7 @@ h1 {
 }
 
 .product:hover {
+    background-color: #9a949492;
     transform: translateY(-5px) translateX(-5px);
     box-shadow: #333 5px 5px 15px;
     border-radius: 13px;
@@ -225,7 +227,7 @@ h1 {
 }
 @media (max-width: 5000px) {
     .search {
-        margin: 0 100px;
+        margin: 0 100px 0 70px;
     }
   .cart-badge {
     width: 12px;
@@ -238,7 +240,7 @@ h1 {
 }
 @media (max-width: 1200px) {
     .search {
-        margin: 0 50px;
+        margin: 0 50px 0 30px;
     }
     h1 {
       font-size: 20px;
@@ -254,7 +256,7 @@ h1 {
 }
 @media (max-width: 1000px) {
     .search {
-        margin: 0 30px;
+        margin: 0 30px 0 20px;
     }
     h1 {
       font-size: 20px;
@@ -271,7 +273,7 @@ h1 {
 @media (max-width: 920px) {
   
     .search {
-        margin: 0 20px;
+        margin: 0 20px 0 10px;
     }
     h1 {
       font-size: 20px;
@@ -289,7 +291,7 @@ h1 {
 @media (max-width: 850px) {
 
     .search {
-        margin: 0 5px;
+        margin: 0 5px ;
         width: 40%;
     }
     h1 {
