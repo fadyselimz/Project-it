@@ -199,18 +199,19 @@ h1 {
 .acc1 img ,
 .eng1 img {
 
-    height: 130px;
-    width: auto;
+    height: 115px;
+    width: 80px;
     transition: 0.3s;
 }
 
-.horror1 img:hover,
-.fantasy1 img:hover,
-.romantic1 img:hover,
-.acc1 img:hover ,
-.eng1 img:hover {
-    height: 155px;
-    width: auto;
+.horror:hover,
+.fantasy:hover,
+.romantic:hover,
+.acc:hover ,
+.eng:hover {
+    /* height: 140px;
+    width: auto; */
+ margin-top: 5px;
 }
 
 .h3{
@@ -228,6 +229,8 @@ h1 {
 
 .book-name{
     margin-left: 30px;
+    max-width: 90%;
+    justify-content: center;
     
 }
 
@@ -240,18 +243,18 @@ h1 {
 .horror-tytle , .fantasy-tytle ,.romantic-tytle , .acc-tytle , .eng-tytle {
     border: solid 4px black;
     margin-bottom: 20px;
-    background-color: #c2f5d1;
+    background-color: #d5ffe2bb;
     box-sizing: border-box;
     height:auto;
     border-radius: 25px; 
     margin-top: 60px;
-    padding-left: 15px; ;
+    padding-left: 15px; 
 }
 
 .horror-background , .fantasy-background , .romantic-background , .acc-background , .eng-background{
     background-color: #d2c8c8;
-    height: 340px;
- 
+    height: 27%;
+ /* width: 100%; */
  border-radius: 20px;
  box-shadow: 8px 8px 10px 6px rgba(106, 104, 104, 0.844);
  overflow-x: auto;
@@ -270,6 +273,7 @@ h1 {
     background-color: transparent;
     padding: 10px;
     gap: 25px;    
+    
 }
 
 
@@ -279,9 +283,10 @@ h1 {
     background-color: #d2c8c8;
     flex: 0 0 auto;
  width: 13%;
- height:340px ;
+ height:80% ;
  border-radius: 8px;
  grid-template-rows: repeat(4,auto);
+ margin-top: 13px;
 
 }
 .horror1 , .fantasy1 , .romantic1 , .acc1 ,.eng1{
@@ -289,12 +294,13 @@ h1 {
     border: solid 5px black;
     width: fit-content;
     max-height: 90%;
-    grid-area: kof1;
+    max-width: 90%;
     margin-top: 20px;
     margin: auto;
     box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
     padding: 0;
     display: flex;
+    margin-top: 10px;
     
     
 }
@@ -303,7 +309,7 @@ h1 {
 
 
 .eng-background{
-   
+    height: 370px; 
 }
 
 
@@ -311,20 +317,13 @@ h1 {
 
 .eng{/*الديف ال شايل الصوره و ال سعر*/
    
-
+height: 370px;
+width: 15%;
 }
 
 .eng1{
     /*الديف ال شايل الصوره*/
-    border: solid 5px black;
-    width: fit-content;
-    max-height: 90%;
-    grid-area: kof1;
-    margin-top: 20px;
-    margin: auto;
-    box-shadow: 8px 8px 10px 6px rgb(88, 85, 85);
-    padding: 0;
-    display: flex;
+ max-height: 90%;
 }
 
 .highlight {
@@ -434,3 +433,5 @@ h1 {
     padding: 1px 4px;
 }
 }
+
+
