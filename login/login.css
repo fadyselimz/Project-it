@@ -28,6 +28,9 @@ body {
     text-align: center;
     color: rgb(35, 47, 62);
   }
+  .h2:hover {
+    color: rgb(255, 153, 0);
+  }
   input {
     width: 100%;
     padding:
@@ -43,13 +46,10 @@ body {
   .my-btn {
     background:
   rgb(255, 153, 0);
-    border-radius:
-  10px;
+    border-radius:10px;
+  cursor: pointer;
   }
   
-
-
-
   body { font-family: Arial; max-width: 300px; margin: 0 auto; padding: 20px; }
   .tab { padding: 10px; cursor: pointer; }
   .active { background:
