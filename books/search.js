@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         removeHighlights();
 
-
         let firstMatch = null;
         
         products.forEach(product => {
@@ -28,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Scroll to first match if found, with improved positioning
+        
         if (firstMatch) {
-            const headerOffset = 150; // Adjust based on your header height
+            const headerOffset = 150; 
             const elementPosition = firstMatch.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

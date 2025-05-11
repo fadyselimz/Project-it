@@ -1,6 +1,6 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
-    
+         
 function showTab(tab) {
     document.getElementById('loginForm').classList.remove('active');
     document.getElementById('signupForm').classList.remove('active');

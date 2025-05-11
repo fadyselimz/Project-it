@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-input');
-    
-    // Function to remove highlights from all products
+ 
     function removeHighlights() {
         document.querySelectorAll('.product').forEach(product => {
             product.classList.remove('highlight');
@@ -12,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = this.value.toLowerCase();
         const products = document.querySelectorAll('.product');
         
-        // Remove previous highlights
+       
         removeHighlights();
-
 
         let firstMatch = null;
         
@@ -32,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Scroll to first match if found, with improved positioning
         if (firstMatch) {
-            const headerOffset = 150; // Adjust based on your header height
+            const headerOffset = 150;
             const elementPosition = firstMatch.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
