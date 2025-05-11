@@ -192,7 +192,6 @@ h1 {
     transform: translateY(-5px) translateX(-5px);
     box-shadow: #333 5px 5px 15px;
     border-radius: 13px;
-    cursor: pointer;
     }
 .add-to-cart {
     background-color: #FFD814; 
