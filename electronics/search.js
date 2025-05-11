@@ -15,13 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove previous highlights
         removeHighlights();
 
-        // If search is empty, show all products and maintain layout
-        if (!searchTerm) {
-            products.forEach(product => {
-                product.style.display = '';
-            });
-            return;
-        }
 
         let firstMatch = null;
         
