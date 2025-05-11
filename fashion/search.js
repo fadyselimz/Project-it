@@ -1,41 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-input');
-    
-    function removeHighlights() {
-        document.querySelectorAll('.product').forEach(product => {
-            product.classList.remove('highlight');
-        });
-    }
+    const productCards = document.querySelectorAll('.product');
 
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        const products = document.querySelectorAll('.product');
-        
-        removeHighlights();
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchValue = searchInput.value.toLowerCase();
 
-        if (!searchTerm) {
-            products.forEach(product => {
-                product.style.display = '';
-            });
-            return;
-        }
+            for (let i = 0; i < productCards.length; i++) {
+                const card = productCards[i];
 
-        products.forEach(product => {
-            const productName = product.querySelector('h3').textContent.toLowerCase();
-            const productPrice = product.querySelector('.price').textContent.toLowerCase();
-            
-            if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
-                product.style.display = '';
-                product.classList.add('highlight');
-            } else {
-                product.style.display = 'none';
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                
+                
+                if (title.includes(searchValue)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
             }
         });
-    });
-
-    searchInput.addEventListener('blur', function() {
-        if (!this.value) {
-            removeHighlights();
-        }
-    });
+    }
 });
